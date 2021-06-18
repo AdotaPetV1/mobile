@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import { StatusBar } from 'react-native';
 
 export const Container = styled.View`
     padding-top: 15%;
@@ -8,8 +9,15 @@ export const Container = styled.View`
     background-color: #F5F5F5;
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100%;
 `;
 
-/*
-View, Text, Button, 
-*/
+export const ScrollView = styled.ScrollView`
+    margin-left:20px;
+    margin-right: 10px;
+`;
+
+export const SafeAreaView = styled.SafeAreaView`
+    padding-top: 15%;
+`;

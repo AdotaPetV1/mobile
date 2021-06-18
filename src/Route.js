@@ -3,12 +3,17 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
-
+import Home from './pages/Home';
+import Profile from './pages/Profile';
+import Favorites from './pages/Favorites';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
+        Home,
         Login,
-        Register
+        Register,
+        Profile,
+        Favorites
     })
   );
   
