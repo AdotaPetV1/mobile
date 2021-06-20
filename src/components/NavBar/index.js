@@ -19,7 +19,6 @@ export default function Footer(props){
         navigation.navigate('Profile');
     }
 
-
     return(
         <View>
             <Container onPress={GoToHome}>
