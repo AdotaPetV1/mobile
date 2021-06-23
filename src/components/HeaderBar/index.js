@@ -1,12 +1,12 @@
 import React from 'react';
-import { View,Text } from 'react-native';
-import {  Container } from './style';
+// import { View,Text } from 'react-native';
+import {  Container, HeaderName } from './style';
 
-export default function HeaderBar(){
+export default function HeaderBar({headerName}){
 
     return(
         <Container>
-                <Text>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</Text>
+                <HeaderName>Categorias</HeaderName>
         </Container>
     )
 }

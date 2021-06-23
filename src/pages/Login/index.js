@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Image, TextInput, CheckBox} from "react-native";
+import { Image, TextInput, CheckBox} from "react-native"; /* Tags nativas */
 import { Button, TextButton, Icon, TextInputEmail, TextInputPassword, CheckBoxLogin, TextPasswordSave, TextForgetPassword, 
-	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount} from "./style";
-import { Container } from "../../theme/LayoutStyles";
+	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount} from "./style"; /* Tags criadas */
+import { Container } from "../../theme/LayoutStyles"; /* Tags criada global */
 import HeaderBar from '../../components/HeaderBar';
 
 export default function Login({navigation}){
@@ -21,7 +21,7 @@ export default function Login({navigation}){
 
     const renderIcon = () => (
 		<Icon>
-			<Image source={require("../../../assets/adotapet-icon.png")}/>
+			<Image source={require("../../../assets/adotapet-icon.png")}/> 
 		</Icon>
     );
 
@@ -49,9 +49,7 @@ export default function Login({navigation}){
             value={isSelected}
             onValueChange={setSelection}/>
         <TextPasswordSave>Salvar senha</TextPasswordSave>
-        <ButtonGhost
-        
-        >
+        <ButtonGhost>
             <TextForgetPassword>Esqueceu a senha</TextForgetPassword>
         </ButtonGhost>
     </CheckBoxLogin>
