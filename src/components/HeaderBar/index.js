@@ -6,7 +6,7 @@ export default function HeaderBar({headerName}){
 
     return(
         <Container>
-                <HeaderName>Categorias</HeaderName>
+                <HeaderName>{headerName}</HeaderName>
         </Container>
     )
 }

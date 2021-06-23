@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image } from 'react-native';
 import { View, Text, Container } from './style';
-import { useNavigation } from '@react-navigation/native';
 
 export default function Footer(props){
 

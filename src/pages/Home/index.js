@@ -54,7 +54,7 @@ export default function Home({navigation}){
     return (
         <>  
           <SafeAreaView>
-            <HeaderBar/>
+            <HeaderBar headerName="Categorias"/>
             <ScrollView>
               <Anchor>
               <DetailsPage>

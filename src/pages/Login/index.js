@@ -3,7 +3,6 @@ import { Image, TextInput, CheckBox} from "react-native"; /* Tags nativas */
 import { Button, TextButton, Icon, TextInputEmail, TextInputPassword, CheckBoxLogin, TextPasswordSave, TextForgetPassword, 
 	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount} from "./style"; /* Tags criadas */
 import { Container } from "../../theme/LayoutStyles"; /* Tags criada global */
-import HeaderBar from '../../components/HeaderBar';
 
 export default function Login({navigation}){
 
