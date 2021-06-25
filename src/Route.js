@@ -9,8 +9,8 @@ import Favorites from './pages/Favorites';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
-        Home,
         Login,
+        Home,
         Register,
         Profile,
         Favorites
