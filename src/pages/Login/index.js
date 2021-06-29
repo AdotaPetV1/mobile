@@ -3,6 +3,7 @@ import { Image, TextInput, CheckBox} from "react-native"; /* Tags nativas */
 import { Button, TextButton, Icon, TextInputEmail, TextInputPassword, CheckBoxLogin, TextPasswordSave, TextForgetPassword, 
 	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount} from "./style"; /* Tags criadas */
 import { Container } from "../../theme/LayoutStyles"; /* Tags criada global */
+import { api } from '../../services/api';
 
 export default function Login({navigation}){
 
@@ -10,8 +11,28 @@ export default function Login({navigation}){
 	const [password, onChangePassword] = React.useState(null);
 	const [isSelected, setSelection] = useState(false);
 
-	function onClickButtonLogin(){
-		navigation.navigate("Home");
+
+	async function onClickButtonLogin(){
+        console.log("Entrou!")
+        const user = { 
+            Email : text,
+            Senha : password
+        };
+
+        await api.post('/auth/login', { user }).then(function(response){
+            
+            
+            if(response.data){
+                console.log("Funcionou")
+                navigation.navigate("Home");
+            }
+            else{
+                console.log("Erro")
+            }
+
+        });
+
+
 	}
 
     function onClickButtonRegister(){
