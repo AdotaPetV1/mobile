@@ -31,7 +31,8 @@ export default function Home({navigation}){
             <HeaderSelectorName>Usuário</HeaderSelectorName>
           </SelectorBlockDiv>
         </SelectorBlock>
-      </ButtonGhost>   
+      </ButtonGhost>  
+
           </>)
   };
 
