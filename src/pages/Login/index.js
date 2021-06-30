@@ -1,37 +1,44 @@
 import React, { useState } from "react";
 import { Image, TextInput, CheckBox} from "react-native"; /* Tags nativas */
 import { Button, TextButton, Icon, TextInputEmail, TextInputPassword, CheckBoxLogin, TextPasswordSave, TextForgetPassword, 
-	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount} from "./style"; /* Tags criadas */
+	ButtonGhost, TextQuestion, ViewCreateAccount, TextCreateAccount, Error} from "./style"; /* Tags criadas */
 import { Container } from "../../theme/LayoutStyles"; /* Tags criada global */
-import { api } from '../../services/api';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import api  from '../../services/api';
 
 export default function Login({navigation}){
 
 	const [text, onChangeText] = React.useState(null);
 	const [password, onChangePassword] = React.useState(null);
 	const [isSelected, setSelection] = useState(false);
-
+    const [showError, setError] = useState(false);
 
 	async function onClickButtonLogin(){
-        console.log("Entrou!")
-        const user = { 
-            Email : text,
-            Senha : password
-        };
+        
+        try{
 
-        await api.post('/auth/login', { user }).then(function(response){
-            
-            
-            if(response.data){
-                console.log("Funcionou")
+            const user = { 
+                Email : text,
+                Senha : password
+            };
+
+            const response = await api.post('/auth/login', user);
+
+            if(response.status == 200){
+                
+                const result = response.data;
+                await AsyncStorage.setItem('USER_TOKEN', JSON.stringify(result.data.token));
+                await AsyncStorage.setItem('USER_DATA', JSON.stringify(result.data.user));
+
                 navigation.navigate("Home");
-            }
-            else{
-                console.log("Erro")
+            }else{
+                setError(true);
             }
 
-        });
-
+        }
+        catch(err){
+            setError(true);
+        }
 
 	}
 
@@ -90,12 +97,20 @@ export default function Login({navigation}){
 			    </ButtonGhost>
 		</ViewCreateAccount>
     );
+    
+    function renderErrorLogin (){
+        if(showError)
+            return(<Error>Usuário ou senha inválidos!</Error>)
+        else
+            return null;
+    }
 
 	return(
 		<Container>
             {renderIcon()}
             {renderLabelsLogin()}
 			{renderCheckbox()}
+            {renderErrorLogin()}
 			{renderButtonLogin()}
 			{renderCreateAccount()}
 		</Container>

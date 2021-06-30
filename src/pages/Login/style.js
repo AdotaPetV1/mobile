@@ -23,6 +23,14 @@ margin-top: 6px;
 margin-left: 36px;
 `;
 
+export const Error = styled.Text`
+font-size: 15px;
+font-style: normal;
+color: #E54C4C;
+margin-top: 6px;
+margin-left: 25%;
+`;
+
 export const ViewCreateAccount = styled.View`
 flex-direction: row;
 padding-bottom: 200px;
