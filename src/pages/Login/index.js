@@ -46,6 +46,8 @@ export default function Login({navigation}){
 		navigation.navigate("Register");
 	}
 
+    
+
     const renderIcon = () => (
 		<Icon>
 			<Image source={require("../../../assets/adotapet-icon.png")}/> 
