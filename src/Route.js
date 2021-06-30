@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 import RegisterUser from './pages/RegisterUser'
+import RegisterOng from './pages/RegisterOng';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
@@ -14,6 +15,7 @@ const Routes = createAppContainer(
         Home,
         Register,
         RegisterUser,
+        RegisterOng,
         Profile,
         Favorites
     })
