@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseUrl: 'https://localhost:8082/api'
+    baseURL: 'https://adota-pet-backend.herokuapp.com/api'
 });
 
 export default api;
