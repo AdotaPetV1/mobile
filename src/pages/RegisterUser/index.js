@@ -16,7 +16,9 @@ export default function RegisterUser({navigation}){
   const [uf, onChangeUf] = React.useState(null);
   const [cep, onChangeCep] = React.useState(null);
 
-  const back = 'Register';
+  function onClickButtonRegisterPassword(){
+		navigation.navigate("RegisterPassword");
+	}
 
     return (
         <>  
@@ -64,7 +66,7 @@ export default function RegisterUser({navigation}){
                 onChangeText={onChangeCep}
                 placeholder="CEP"/>
             </TextInputLabel>
-            <Button>
+            <Button onPress={onClickButtonRegisterPassword}>
 			        <TextButton>Continuar</TextButton>
 		        </Button>
             </ScrollView>

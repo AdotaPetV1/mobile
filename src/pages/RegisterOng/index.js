@@ -17,6 +17,11 @@ export default function RegisterOng({navigation}){
   const [uf, onChangeUf] = React.useState(null);
   const [cep, onChangeCep] = React.useState(null);
 
+  
+  function onClickButtonRegisterPassword(){
+		navigation.navigate("RegisterPassword");
+	}
+
     return (
         <>  
           <SafeAreaView>
@@ -68,7 +73,7 @@ export default function RegisterOng({navigation}){
                 onChangeText={onChangeCep}
                 placeholder="CEP"/>
             </TextInputLabel>
-            <Button>
+            <Button onPress={onClickButtonRegisterPassword}>
 			        <TextButton>Continuar</TextButton>
 		        </Button>
             </ScrollView>
