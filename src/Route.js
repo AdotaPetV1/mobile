@@ -8,7 +8,8 @@ import Profile from './pages/Profile';
 import Favorites from './pages/Favorites';
 import RegisterUser from './pages/RegisterUser'
 import RegisterOng from './pages/RegisterOng';
-import RegisterPassword from './pages/RegisterPassword'
+import RegisterPassword from './pages/RegisterPassword';
+import AdotaDog from './pages/AdotaDog';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
@@ -18,6 +19,7 @@ const Routes = createAppContainer(
         RegisterUser,
         RegisterOng,
         RegisterPassword,
+        AdotaDog,
         Profile,
         Favorites
     })

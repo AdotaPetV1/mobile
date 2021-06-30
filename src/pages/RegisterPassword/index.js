@@ -15,6 +15,10 @@ export default function RegisterPassword ({navigation}){
 			<Image source={require("../../../assets/adotapet-icon.png")}/> 
 		</Icon>
     );
+  
+    function onClickButtonHome(){
+      navigation.navigate("Login");
+    }
 
     return (
         <>  
@@ -32,8 +36,8 @@ export default function RegisterPassword ({navigation}){
                 onChangeText={onChangeRepeat}
                 placeholder="Repita a senha"/>
             </TextInputLabel>
-            <Button>
-			        <TextButton>Continuar</TextButton>
+            <Button onPress={onClickButtonHome}>
+			        <TextButton>Finalizar</TextButton>
 		        </Button>
             </ScrollView>
           </SafeAreaView>

@@ -7,10 +7,14 @@ import {DetailsPage, SelectorBlock, SelectorBlockDiv, HeaderSelectorName, Anchor
 
 export default function Home({navigation}){
 
+  function onClickButtonRegisterOng(){
+		navigation.navigate("AdotaDog");
+	}
+
   const renderSelectorIconPets = () => {
     return(
       <>
-      <ButtonGhost>
+      <ButtonGhost onPress={onClickButtonRegisterOng}>
         <SelectorBlock>
           <SelectorBlockDiv>
             <Image source={require("../../../assets/adotapet-dog-icon.png")}/>
