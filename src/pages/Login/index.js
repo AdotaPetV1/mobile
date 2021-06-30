@@ -13,31 +13,14 @@ export default function Login({navigation}){
 
 
 	async function onClickButtonLogin(){
-        console.log("Entrou!")
-        const user = { 
-            Email : text,
-            Senha : password
-        };
-
-        await api.post('/auth/login', { user }).then(function(response){
-            
-            
-            if(response.data){
-                console.log("Funcionou")
                 navigation.navigate("Home");
-            }
-            else{
-                console.log("Erro")
-            }
-
-        });
-
-
 	}
 
     function onClickButtonRegister(){
 		navigation.navigate("Register");
 	}
+
+    
 
     const renderIcon = () => (
 		<Icon>

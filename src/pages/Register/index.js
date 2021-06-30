@@ -5,7 +5,11 @@ import HeaderBar from '../../components/HeaderBar'
 import NavBarHome from '../../components/NavBarBackToHome';
 import {DetailsPage, SelectorBlock, SelectorBlockDiv, HeaderSelectorName, Anchor, ButtonGhost} from "./style"; 
 
-export default function Home({navigation}){
+export default function Register({navigation}){
+
+  function onClickButtonRegister(){
+		navigation.navigate("RegisterUser");
+	}
 
   const renderSelectorIconOng = () => {
     return(
@@ -24,7 +28,7 @@ export default function Home({navigation}){
   const renderSelectorIconUser = () => {
     return(
       <>
-      <ButtonGhost>
+      <ButtonGhost onPress={onClickButtonRegister}>
         <SelectorBlock>
           <SelectorBlockDiv>
             <Image source={require("../../../assets/adotapet-user-icon.png")}/>
