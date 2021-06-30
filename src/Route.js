@@ -10,6 +10,7 @@ import RegisterUser from './pages/RegisterUser'
 import RegisterOng from './pages/RegisterOng';
 import RegisterPassword from './pages/RegisterPassword';
 import AdotaDog from './pages/AdotaDog';
+import AdotaCat from './pages/AdotaCat';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
@@ -20,6 +21,7 @@ const Routes = createAppContainer(
         RegisterOng,
         RegisterPassword,
         AdotaDog,
+        AdotaCat,
         Profile,
         Favorites
     })

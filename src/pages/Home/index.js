@@ -7,14 +7,19 @@ import {DetailsPage, SelectorBlock, SelectorBlockDiv, HeaderSelectorName, Anchor
 
 export default function Home({navigation}){
 
-  function onClickButtonRegisterOng(){
+  function onClickButtonRegisterDog(){
 		navigation.navigate("AdotaDog");
 	}
+
+  function onClickButtonRegisterCat(){
+		navigation.navigate("AdotaCat");
+	}
+  
 
   const renderSelectorIconPets = () => {
     return(
       <>
-      <ButtonGhost onPress={onClickButtonRegisterOng}>
+      <ButtonGhost onPress={onClickButtonRegisterDog}>
         <SelectorBlock>
           <SelectorBlockDiv>
             <Image source={require("../../../assets/adotapet-dog-icon.png")}/>
@@ -22,7 +27,7 @@ export default function Home({navigation}){
           </SelectorBlockDiv>
         </SelectorBlock>
       </ButtonGhost>  
-      <ButtonGhost>
+      <ButtonGhost onPress={onClickButtonRegisterCat}>
         <SelectorBlock>
           <SelectorBlockDiv>
               <Image source={require("../../../assets/adotapet-cat-icon.png")}/>
