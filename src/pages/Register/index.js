@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-native';
 import { ScrollView, SafeAreaView } from '../../theme/LayoutStyles';
 import HeaderBar from '../../components/HeaderBar'
-import NavBarHome from '../../components/NavBarBackToHome';
+import NavBarLogin from '../../components/NavBarBackToLogin';
 import {DetailsPage, SelectorBlock, SelectorBlockDiv, HeaderSelectorName, Anchor, ButtonGhost} from "./style"; 
 
 export default function Register({navigation}){
@@ -59,7 +59,7 @@ export default function Register({navigation}){
               </Anchor>
             </ScrollView>
           </SafeAreaView>
-          <NavBarHome navigation={navigation}/>
+          <NavBarLogin navigation={navigation}/>
         </>
       );
 }

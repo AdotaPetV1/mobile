@@ -2,7 +2,7 @@ import React from 'react';
 import { TextInput, Image} from 'react-native';
 import { ScrollView, SafeAreaView } from '../../theme/LayoutStyles';
 import HeaderBar from '../../components/HeaderBar'
-import NavBarRegister from '../../components/NavBarBackToRegister';
+import NavBarLogin from '../../components/NavBarBackToLogin';
 import {TextInputLabel, Button, TextButton, Icon} from "./style"; 
 
 export default function ForgetPassword ({navigation}){
@@ -37,7 +37,7 @@ export default function ForgetPassword ({navigation}){
 		        </Button>
             </ScrollView>
           </SafeAreaView>
-          <NavBarRegister navigation={navigation}/>
+          <NavBarLogin navigation={navigation}/>
         </>
       );
 }

@@ -28,11 +28,13 @@ export default function RegisterPassword ({navigation}){
             <ScrollView>
               <TextInputLabel>
                 <TextInput  value={password}
+                secureTextEntry={true}
                 onChangeText={onChangePassword}
                 placeholder="Digite uma senha"/>
             </TextInputLabel>
             <TextInputLabel>
                 <TextInput  value={repeatPassword}
+                secureTextEntry={true}
                 onChangeText={onChangeRepeat}
                 placeholder="Repita a senha"/>
             </TextInputLabel>

@@ -14,6 +14,8 @@ import AdotaCat from './pages/AdotaCat';
 import ForgetPassword from './pages/ForgetPassword';
 import ForgetPasswordToken from './pages/ForgetPasswordToken';
 import ForgetPasswordRepeat from './pages/ForgetPasswordRepeat';
+import PerfilDog from './pages/PerfilDog';
+import PerfilCat from './pages/PerfilCat';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
@@ -27,6 +29,8 @@ const Routes = createAppContainer(
         ForgetPasswordToken,
         ForgetPasswordRepeat,
         AdotaDog,
+        PerfilDog,
+        PerfilCat,
         AdotaCat,
         Profile,
         Favorites
