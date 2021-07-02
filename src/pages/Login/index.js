@@ -46,6 +46,10 @@ export default function Login({navigation}){
 		navigation.navigate("Register");
 	}
 
+    function onClickButtonForgetPassword(){
+        navigation.navigate("ForgetPassword");
+    }
+
     
 
     const renderIcon = () => (
@@ -78,7 +82,7 @@ export default function Login({navigation}){
             value={isSelected}
             onValueChange={setSelection}/>
         <TextPasswordSave>Salvar senha</TextPasswordSave>
-        <ButtonGhost>
+        <ButtonGhost onPress={onClickButtonForgetPassword}>
             <TextForgetPassword>Esqueceu a senha</TextForgetPassword>
         </ButtonGhost>
     </CheckBoxLogin>

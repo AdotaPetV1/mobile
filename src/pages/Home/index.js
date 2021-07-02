@@ -38,27 +38,7 @@ export default function Home({navigation}){
           </>)
   };
 
-  const renderSelectorIconDonates = () => {
-    return(
-      <>
-      <ButtonGhost>
-        <SelectorBlock>
-          <SelectorBlockDiv>
-            <Image source={require("../../../assets/adotapet-donate-icon.png")}/>
-            <HeaderSelectorName>Doações</HeaderSelectorName>
-          </SelectorBlockDiv>
-        </SelectorBlock>
-      </ButtonGhost>
-      <ButtonGhost>  
-        <SelectorBlock>
-          <SelectorBlockDiv>
-              <Image source={require("../../../assets/adotapet-cash-icon.png")}/>
-                <HeaderSelectorName>Contribuições</HeaderSelectorName>
-            </SelectorBlockDiv>
-          </SelectorBlock>
-      </ButtonGhost>    
-          </>)
-  };
+
 
     return (
         <>  
@@ -68,9 +48,6 @@ export default function Home({navigation}){
               <Anchor>
               <DetailsPage>
                {renderSelectorIconPets()}
-              </DetailsPage>
-              <DetailsPage>
-               {renderSelectorIconDonates()}
               </DetailsPage>
               </Anchor>
             </ScrollView>

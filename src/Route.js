@@ -11,6 +11,9 @@ import RegisterOng from './pages/RegisterOng';
 import RegisterPassword from './pages/RegisterPassword';
 import AdotaDog from './pages/AdotaDog';
 import AdotaCat from './pages/AdotaCat';
+import ForgetPassword from './pages/ForgetPassword';
+import ForgetPasswordToken from './pages/ForgetPasswordToken';
+import ForgetPasswordRepeat from './pages/ForgetPasswordRepeat';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
@@ -20,6 +23,9 @@ const Routes = createAppContainer(
         RegisterUser,
         RegisterOng,
         RegisterPassword,
+        ForgetPassword,
+        ForgetPasswordToken,
+        ForgetPasswordRepeat,
         AdotaDog,
         AdotaCat,
         Profile,
