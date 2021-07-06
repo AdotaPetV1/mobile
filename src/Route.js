@@ -16,9 +16,11 @@ import ForgetPasswordToken from './pages/ForgetPasswordToken';
 import ForgetPasswordRepeat from './pages/ForgetPasswordRepeat';
 import PerfilDog from './pages/PerfilDog';
 import PerfilCat from './pages/PerfilCat';
+import RegisterPet from './pages/RegisterPet';
 
 const Routes = createAppContainer(
     createSwitchNavigator({
+        RegisterPet,
         Login,
         Home,
         Register,
